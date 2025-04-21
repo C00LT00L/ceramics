@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>ceramics test</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crosby Grim Ceramics</title>
+  <style>
+    @font-face {
+      font-family: 'Special Gothic Expanded 1';
+      src: url('SpecialGothicExpanded1.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: 'Special Gothic Expanded 1', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      width: 90%;
+      max-width: 1000px;
+      padding: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 1px solid white;
+    }
+  </style>
 </head>
-<body style="background:black; color:white; font-family:monospace; text-align:center; padding-top:50px;">
-  <h1>ceramics.crosbygrim.com is working</h1>
-  <p>You're live 🎉</p>
+<body>
+  <h1>Crosby Grim Ceramics</h1>
+  <div class="gallery">
+    <img src="image1.jpg" alt="Ceramic Piece 1" />
+    <img src="image2.jpg" alt="Ceramic Piece 2" />
+    <img src="image3.jpg" alt="Ceramic Piece 3" />
+    <img src="image4.jpg" alt="Ceramic Piece 4" />
+  </div>
 </body>
 </html>
