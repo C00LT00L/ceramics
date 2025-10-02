@@ -50,13 +50,27 @@
       width: 100%;
       border: 1px solid white;
 
-    .brand {
-      background: white;
-      color: black;
-      padding: 0.2em 0.5em;
-      text-decoration: none;
-    }
+.brand-btn {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 0.3em 0.8em;
+  margin-right: 0.5em;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+}
 
+.brand-btn:hover {
+  background: #ddd; /* subtle hover effect */
+}
+
+.ceramics {
+  color: white;
+}
+      
 .brand:hover {
   background: #eee; /* subtle hover effect */
 }
@@ -71,7 +85,7 @@
 <body>
   <header>
     <h1>
-      <a href="https://crosbygrim.com" class="brand">Crosby Grim</a>
+      <a href="https://crosbygrim.com" class="brand-btn">Crosby Grim</a>
       <span class="ceramics">Ceramics</span>
     </h1>
   </header>
