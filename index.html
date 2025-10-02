@@ -19,10 +19,50 @@
 
     header {
       width: 100%;
-      padding: 1rem;
-      background-color: black;
-      text-align: center;
-      border-bottom: 1px solid white;
+      background: #000;
+      border-bottom: 1px solid #fff;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+    }
+
+    .header-inner h1 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 2rem; /* adjust if you want larger/smaller */
+      line-height: 1;
+      font-family: 'Special Gothic Expanded One', monospace; /* keep your font */
+    }
+
+    .brand-btn {
+      display: inline-block;
+      padding: 0.28em 0.8em;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border: 0;
+      border-radius: 2px; /* set 0 for sharp corners */
+      font-family: inherit;
+      font-size: 1em;
+      line-height: 1;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent; /* mobile */
+    }
+    .brand-btn,
+    .brand-btn:link,
+    .brand-btn:visited,
+    .brand-btn:hover,
+    .brand-btn:active,
+    .brand-btn:focus {
+      background: #ffffff !important;
+      color: #000000 !important;
+      text-decoration: none !important;
+      outline: none !important;
+      box-shadow: none !important;
     }
     footer {
       text-align: center;
@@ -49,18 +89,19 @@
     .gallery img {
       width: 100%;
       border: 1px solid white;
-
-.brand-btn {
-  display: inline-block;
-  background: white;
-  color: black;
-  padding: 0.3em 0.8em;
-  margin-right: 0.5em;
-  border: none;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 1em;
-  cursor: pointer;
+.site-title {
+  color: #ffffff;
+  margin-left: 0.2rem;
+  font-weight: 600; /* optional */
+}
+@media (max-width: 420px) {
+  .header-inner h1 { font-size: 1.2rem; gap: 0.4rem; }
+  .brand-btn { padding: 0.22em 0.6em; font-size: 0.95rem; }
+}
+.brand-btn::selection,
+.brand-btn::-moz-selection {
+  background: #ffffff;
+  color: #000000;
 }
 
 .brand-btn:hover {
@@ -84,10 +125,12 @@
 </head>
 <body>
   <header>
-    <h1>
-      <a href="https://crosbygrim.com" class="brand-btn">Crosby Grim</a>
-      <span class="ceramics">Ceramics</span>
-    </h1>
+    <div class="header-inner">
+      <h1>
+        <a href="https://crosbygrim.com" class="brand-btn" rel="noopener noreferrer">Crosby Grim</a>
+        <span class="site-title">Ceramics</span>
+      </h1>
+    </div>
   </header>
   <div class="gallery">
     <img src="image1.jpg" alt="Ceramic Piece 1" />
